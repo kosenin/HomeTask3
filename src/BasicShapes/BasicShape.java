@@ -8,34 +8,45 @@ public class BasicShape {
     protected double dimensionOne;
     protected double dimensionTwo;
 
-    protected BasicShape(double parameterOne, double parameterTwo) {
-        this.dimensionOne = parameterOne;
-        this.dimensionTwo = parameterTwo;
-    }
-
-    public double getDimensionOne() {
-        return dimensionOne;
-    }
-
-    public void setDimensionOne(double dimensionOne) {
+    public BasicShape(double dimensionOne, double dimensionTwo) {
         this.dimensionOne = dimensionOne;
-    }
-
-    public double getDimensionTwo() {
-        return dimensionTwo;
-    }
-
-    public void setDimensionTwo(double dimensionTwo) {
         this.dimensionTwo = dimensionTwo;
     }
 
-    protected BasicShape(double parameterOne) {
-        this.dimensionOne = parameterOne;
+
+    public BasicShape(double dimensionOne) {
+        this.dimensionOne = dimensionOne;
     }
 
-    public void area() {
+    public double area() {
+        return this.area();
 
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null)
+            return false;
+        if (getClass() != o.getClass())
+            return false;
+        BasicShape other = (BasicShape) o;
+        if (dimensionOne != other.dimensionOne)
+            return false;
+        if (dimensionTwo != other.dimensionTwo)
+            return false;
+        return true;
+    }
 
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(dimensionOne);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(dimensionTwo);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
 }

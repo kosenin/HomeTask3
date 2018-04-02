@@ -11,8 +11,8 @@ public class Square extends BasicShape {
         super(parameterOne, parameterTwo);
     }
 
-    public void area() {
-        System.out.println("Area of the given Square is " + dimensionOne * dimensionTwo);
+    public double area() {
+        return (dimensionOne * dimensionTwo);
     }
 
     @Override

@@ -10,8 +10,8 @@ public class Triangle extends BasicShape {
         super(parameterOne, parameterTwo);
     }
 
-    public void area() {
-        System.out.println("Area of the given Triangle is " + 0.5 * dimensionOne * dimensionTwo);
+    public double area() {
+        return (0.5 * dimensionOne * dimensionTwo);
     }
 
     @Override

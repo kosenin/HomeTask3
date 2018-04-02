@@ -1,4 +1,5 @@
 import BasicShapes.BasicShape;
+import Shapes.Round;
 
 import java.util.Comparator;
 
@@ -8,16 +9,17 @@ import java.util.Comparator;
 public class ShapesComparator implements Comparator<BasicShape>
 
 {
-
     @Override
     public int compare(BasicShape o1, BasicShape o2) {
 
-        double length = o1.getDimensionOne();
-        double length2 = o2.getDimensionOne();
 
-        return Double.compare(length, length2);
+        double area1 = o1.area();
+        double area2 = o2.area();
+
+        return Double.compare(area1, area2);
     }
 
-
 }
+
+
 
