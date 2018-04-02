@@ -15,8 +15,5 @@ public class Square extends BasicShape {
         return (dimensionOne * dimensionTwo);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(dimensionOne);
-    }
+
 }

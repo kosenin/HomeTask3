@@ -14,8 +14,5 @@ public class Triangle extends BasicShape {
         return (0.5 * dimensionOne * dimensionTwo);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(dimensionOne);
-    }
+
 }
